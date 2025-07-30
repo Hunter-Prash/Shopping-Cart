@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Wireless Headphones",
+    "description": "High-quality noise-canceling headphones",
+    "price": 129.99,
+    "image": "https://images.unsplash.com/photo-1518443895479-83e7c4e223f8"
+  },
+  {
+    "id": 2,
+    "name": "Smart Watch",
+    "description": "Track your fitness and notifications",
+    "price": 199.99,
+    "image": "https://images.unsplash.com/photo-1603791440384-56cd371ee9a7"
+  },
+  {
+    "id": 3,
+    "name": "Laptop",
+    "description": "Powerful performance for work and play",
+    "price": 999.99,
+    "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8"
+  }
+]
