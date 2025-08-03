@@ -16,14 +16,17 @@ const ProductPage = ({ products }) => {
   }, [cartItems]);
 
   const handleClick = (idx) => {
-    if (products[idx].flag === 1) {
+    if (cartItems.some(item => item.name === products[idx].name)) {
       alert('Item already added');
     } else {
-      products[idx].flag = 1;
-      products[idx].quantity=1
-      
-      const temp = { name: products[idx].name, price: products[idx].price, quantity:products[idx].quantity};
-      setCartItems((prev) => [...prev, temp]);
+      const temp = {
+        name: products[idx].name,
+        price: products[idx].price,
+        quantity: 1
+      };
+
+      const updatedCart = [...cartItems, temp];
+      setCartItems(updatedCart);
       setTimeout(() => {
         alert('Item added');
       }, 300);
@@ -31,8 +34,9 @@ const ProductPage = ({ products }) => {
   };
 
   const goToCart = () => {
-    navigate('/cart');
+    navigate('/cart', { state: { products: products } });
   };
+
 
   return (
     <>
